@@ -1,0 +1,45 @@
+/* About Us Section */
+.about-container {
+  padding: 3rem; /* Space around the section */
+  background-color: #f9fafb; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 800px; /* Limit the width for readability */
+  margin: 0 auto; /* Center the section horizontally */
+  text-align: center; /* Center the text */
+}
+
+/* About Us Title */
+.about-title {
+  font-size: 3rem; /* Larger font for title */
+  font-weight: bold; /* Bold the title */
+  color: #1D4ED8; /* Tailwind blue-600 */
+  margin-bottom: 1rem; /* Space between title and description */
+}
+
+/* About Us Description */
+.about-description {
+  font-size: 1.5rem; /* Increased description font size */
+  color: #333; /* Dark color for the description */
+  line-height: 1.8; /* Increased line height for readability */
+  margin-top: 0.5rem; /* Space between title and paragraph */
+}
+
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 3.5rem; /* Larger title for medium screens */
+  }
+
+  .about-description {
+    font-size: 1.75rem; /* Increased description font size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-title {
+    font-size: 4rem; /* Larger title for larger screens */
+  }
+
+  .about-description {
+    font-size: 2rem; /* Increased description font size */
+  }
+}

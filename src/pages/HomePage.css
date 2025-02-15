@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  background: linear-gradient(to right, #3b82f6, #9333ea); /* Gradient background */
+  color: #333;
+  height: 100vh;
+}
+
+/* Center the content */
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Fade-in animation for the page */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Description Section */
+.description {
+  font-size: 1.75rem; /* Increased font size */
+  color: white;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Fade-up animation for description */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Steps Section */
+.steps {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  max-width: 650px;
+  color: #2d3748;
+  animation: slideInUp 1.5s ease-out;
+}
+
+/* Slide-in-up animation for steps section */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading for 'How to Use' */
+.steps h2 {
+  font-size: 2.5rem; /* Increased heading font size */
+  font-weight: bold;
+  color: #3b82f6; /* Blue color for heading */
+  margin-bottom: 1.5rem;
+}
+
+/* List in steps section */
+.steps ol {
+  font-size: 1.5rem; /* Increased font size */
+  line-height: 2;
+  padding-left: 1.5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* List item bold text */
+.steps .font-bold {
+  font-weight: bold;
+  color: #1d4ed8; /* Darker blue */
+}
+
+/* Animation for each list item */
+.steps li {
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Delayed animation for each item */
+.steps li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.steps li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.steps li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Animations for the emojis */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Applying bounce animation for emojis */
+.emoji.animated {
+  display: inline-block;
+  animation: bounce 1s ease infinite;
+}
+
+.emoji.animated:nth-child(2) {
+  animation: shake 1s ease infinite; /* Shake animation for the second emoji */
+}
+
+.emoji.animated:nth-child(3) {
+  animation: bounce 1s ease infinite; /* Bounce animation for the third emoji */
+}

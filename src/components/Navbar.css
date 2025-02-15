@@ -1,0 +1,179 @@
+/* Root variables for light and dark mode */
+:root {
+  --navbar-light: #f9f9f9; /* Soft Off-White */
+  --navbar-dark: #121417;  /* Softer Black */
+  --primary-color: #ffb74d; /* Muted Orange for a gentle highlight */
+
+  --text-light: #374151; /* Dark gray for light mode */
+  --text-dark: #e0e0e0; /* Soft white for dark mode */
+  --shadow-light: rgba(0, 0, 0, 0.15); /* Softer shadow for light mode */
+  --shadow-dark: rgba(255, 255, 255, 0.1); /* Softer glow for dark mode */
+  --bg-light: #f8fafc; /* Soft white background */
+  --bg-dark: #121212; /* Dark charcoal background */
+
+}
+
+/* Default styling for navbar */
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 4rem 2rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--navbar-light);
+  color: var(--text-light);
+  box-shadow: 0 2px 10px var(--shadow-light);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* Dark mode styling */
+.dark-mode .navbar {
+  background: var(--navbar-dark);
+  color: var(--text-dark);
+  box-shadow: 0 2px 10px var(--shadow-dark);
+}
+
+/* Title styling */
+.navbar-title {
+  position: absolute;
+  top: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.8rem;
+  font-weight: bold;
+  color: inherit;
+  text-shadow: 2px 2px 4px var(--shadow-light);
+  transition: text-shadow 0.3s;
+}
+
+.dark-mode .navbar-title {
+  text-shadow: 2px 2px 4px var(--shadow-dark);
+}
+
+.navbar-title span {
+  color: var(--primary-color);
+}
+
+/* Navbar content */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem; /* Adjusted for better positioning */
+}
+
+.nav-links a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 3px var(--shadow-light);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.dark-mode .nav-links a {
+  text-shadow: 1px 1px 3px var(--shadow-dark);
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #e65100; /* Darker orange for hover */
+  text-shadow: 2px 2px 6px var(--shadow-light);
+}
+
+.dark-mode .nav-links a:hover {
+  text-shadow: 2px 2px 6px var(--shadow-dark);
+}
+
+/* Theme toggle & profile icon */
+.nav-icons {
+  display: flex;
+  gap: 8.7rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.dark-mode .theme-toggle {
+  color: var(--text-dark);
+}
+
+.profile-icon {
+  font-size: 2rem;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.dark-mode .profile-icon {
+  color: var(--text-dark);
+}
+
+.profile-icon:hover,
+.theme-toggle:hover {
+  color: var(--primary-color);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Light mode */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  background: var(--navbar-light);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px var(--shadow-light);
+  padding: 10px;
+}
+
+.dark-mode .profile-dropdown {
+  background: var(--navbar-dark);
+  box-shadow: 0px 4px 10px var(--shadow-dark);
+}
+
+.profile-dropdown p {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.dropdown-link:hover {
+  background: #ffcc80; /* Soft orange hover effect */
+}
