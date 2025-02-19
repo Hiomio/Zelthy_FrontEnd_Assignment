@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css"; // Import calendar styles
+import "react-calendar/dist/Calendar.css"; 
 import './Dashboard.css'
 
 const Dashboard = () => {
-  const currentUser = "You"; // Simulating logged-in user
+  const currentUser = "You"; 
   const [users, setUsers] = useState(["You", "Alice", "Bob"]);
   const [selectedUser, setSelectedUser] = useState("You");
   const [userSlots, setUserSlots] = useState({});
@@ -12,8 +12,8 @@ const Dashboard = () => {
   const [availableTimeSlots, setAvailableTimeSlots] = useState([]);
   const [pendingSlot, setPendingSlot] = useState(null);
   const [showSlots, setShowSlots] = useState(false);
-  const [showPrompt, setShowPrompt] = useState(false); // For controlling prompt visibility
-  const [bookedSlots, setBookedSlots] = useState([]); // To
+  const [showPrompt, setShowPrompt] = useState(false); 
+  const [bookedSlots, setBookedSlots] = useState([]);
   const [timezone, setTimezone] = useState("UTC");
   const [editingIndex, setEditingIndex] = useState(null);
   const [editAvailableSlots, setEditAvailableSlots] = useState([]);
@@ -22,9 +22,9 @@ const Dashboard = () => {
   // Load Initial Data (preloaded slots for users)
   useEffect(() => {
     const nextTwoWeeks = new Date();
-    nextTwoWeeks.setDate(nextTwoWeeks.getDate() + 14); // Two weeks from today
+    nextTwoWeeks.setDate(nextTwoWeeks.getDate() + 14); 
 
-    const formatDate = (date) => date.toISOString().split("T")[0]; // Format date to 'YYYY-MM-DD'
+    const formatDate = (date) => date.toISOString().split("T")[0]; 
 
     // Pre-define some booked slots for Alice and Bob with specific dates and times
     setUserSlots({
